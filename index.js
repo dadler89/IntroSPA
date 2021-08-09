@@ -8,12 +8,7 @@ import axios from "axios";
 
 const router = new Navigo(window.location.origin);
 
-// router
-//   .on({
-//     ":page": (params) => render(state[capitalize(params.page)]),
-//     "/": () => render(state.Home),
-//   })
-//   .resolve();
+
 
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
@@ -64,17 +59,6 @@ function addEventListeners(st) {
   }
 }
 
-// get data from an API endpoint
-// axios
-//   .get("https://jsonplaceholder.typicode.com/posts")
-//   // handle the response from the API
-//   .then((response) => {
-//     // for each post in the response Array,
-//     response.data.forEach((post) => {
-//       // add it to state.Blog.posts
-//       state.Blog.posts.push(post);
-//     });
-//   });
 
 router.hooks({
   before: (done, params) => {
