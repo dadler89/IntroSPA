@@ -1,9 +1,11 @@
 import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
-
 import Navigo from "navigo";
 import { capitalize } from "lodash";
-import "./env";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 import axios from "axios";
 
 const router = new Navigo(window.location.origin);
