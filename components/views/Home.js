@@ -15,7 +15,7 @@ export default (st) => html`
   
   
   <h3 id="weather">
-    The weather outside is weather...but it is
+    The weather outside is weather...but the
     Temperature in ${st.weather.city} is
     ${kelvinToFahrenheit(st.weather.temp)}F, feels like
     ${kelvinToFahrenheit(st.weather.feelsLike)}F. Humidity is at
