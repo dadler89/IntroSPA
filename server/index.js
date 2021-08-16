@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose")
-// const greetings = require("./routers/greetings")
+const greetings = require("./routers/greetings")
 
 
 const app = express();
@@ -18,7 +18,7 @@ const logging = (request, response, next) => {
 app.use(express.json());
 app.use(logging);
 
-// app.use(greetings);
+app.use(greetings);
 
 
 
