@@ -1,7 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose")
-const greetings = require("./routers/greetings")
+const dotenv = require("dotenv");
 
+const greetings = require("./routers/greetings");
+const pizzas = require("./routers/pizzas");
+
+dotenv.config();
 
 const app = express();
 
@@ -19,10 +23,11 @@ app.use(express.json());
 app.use(logging);
 
 app.use(greetings);
+app.use(pizzas);
 
 
 
-mongoose.connect("mongodb://localhost/pizzeria", { useNewUrlParser: true }, { useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB, { useNewUrlParser: true }, { useUnifiedTopology: true })
 const db = mongoose.connection
 
 db.on("error", console.error.bind(console, "Connection Error:"));
@@ -50,14 +55,6 @@ app
   });
 
 
-  app
-  .route("/pizzas")
-  .get((request, response) => {
-    response.send(JSON.stringify({ message: "No GET routes available on pizzas funky URI ride." }), 404);
-  })
-  .post((request, response) => {
-    response.send(JSON.stringify({ message: "No POST routes available on  pizzas funky URI ride." }), 404);
-  });
 
 
 

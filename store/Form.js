@@ -1,4 +1,4 @@
 export default {
-  header: "Form",
+  header: "Submit a Photo",
   view: "Form"
 };
