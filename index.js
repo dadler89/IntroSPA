@@ -8,6 +8,7 @@ dotenv.config();
 
 import axios from "axios";
 
+
 const router = new Navigo(window.location.origin);
 
 
@@ -70,6 +71,18 @@ router.hooks({
         : "Home";
 
     switch (page) {
+      case "Pizza":
+        axios
+        .get(`${process.env.API}/pizzas`)
+        .then(response => {
+          state[page].pizzas = response.data;
+          done();
+        })
+        .catch(error => {
+          console.log("Feel your spirits fly", error)
+          done()
+        })
+        break;
       case "Blog":
         state.Blog.posts = [];
         axios
