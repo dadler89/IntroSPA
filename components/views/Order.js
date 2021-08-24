@@ -7,7 +7,7 @@ export default () => html`
     <label for="crust">Crust:</label>
     <select id="crust" name="crust">
       <option value="">Select a Crust</option>
-      <option value="thin">Thin af</option>
+      <option value="thin af">Thin af</option>
       <option value="chicago">Chicago</option>
       <option value="deep-dish">Deep Dish</option>
       <option value="hella-thick">Thick</option>
@@ -27,14 +27,15 @@ export default () => html`
     <input type="checkbox" id="id_of_checkbox1" class="items1" name="toppings" value="Chicken">
     <label for="top1">chicken</label>
     <input type="checkbox" id="id_of_checkbox2" class="items1" name="toppings" value="Bacon">
-    <label for="top2">onion</label>
+    <label for="top2">bacon</label>
     <input type="checkbox" id="id_of_checkbox3" class="items1" name="toppings" value="Spinach">
     <label for="top3">spinach</label>
     <input type="checkbox" id="id_of_checkbox4" class="items1" name="toppings" value="Extra cheese">
     <label for="top4">extra cheese</label>
     <input type="checkbox" id="id_of_checkbox5" class="items1" name="toppings" value="Sauage">
+    <label for="top5">Sausage</label>
     <input type="checkbox" id="id_of_checkbox6" class="items1" name="toppings" value="Pepperoni">
-    <label for="top5">red pepper</label>
+    <label for="top6">Pepperoni</label>
   </div>
   <input type="submit" name="submit" value="Submit Pizza">
 </form>
